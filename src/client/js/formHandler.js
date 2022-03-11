@@ -14,6 +14,12 @@ function handleSubmit(event) {
     .then(function(data) {
         document.getElementById('results').innerHTML = data.message
     })
+
+    Client.getWebAPI()
+
+    .then(function(data) {
+        document.getElementById('weather').innerHTML = data.main.temp
+    })
 }
 
 export { handleSubmit }
